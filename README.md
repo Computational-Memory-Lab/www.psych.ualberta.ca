@@ -15,7 +15,7 @@ The Computational Memory Lab, directed by Dr. Jeremy B. Caplan, investigates hum
 
 This site is hosted via GitHub Pages from the `/docs` folder.
 
-**Live site:** https://devon7y.github.io/www.psych.ualberta.ca/
+**Live site:** https://computational-memory-lab.github.io/www.psych.ualberta.ca/
 
 ## Original Website
 

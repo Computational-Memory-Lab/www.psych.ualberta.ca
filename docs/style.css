@@ -719,7 +719,7 @@ p[style*="color:red"] {
     font-size: 18px;
     line-height: 1.7;
     overflow-x: hidden;
-    background-size: cover, cover, 1500% auto;
+    background-size: cover, cover, 1000% auto;
   }
 
   #header {

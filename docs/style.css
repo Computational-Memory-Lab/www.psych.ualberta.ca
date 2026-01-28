@@ -57,6 +57,7 @@ body {
   line-height: 1.6;
   color: var(--text-dark);
   background-color: var(--bg-light); /* Use background-color for the base color */
+  min-height: 100vh;
 
   /* Define background layers separately for clarity */
   background-image:
@@ -92,10 +93,10 @@ body {
 /* Overlay to fade theta waves in light mode */
 body:before {
   content: "";
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
-  bottom: 0;
+  bottom: -20vh;
   left: 0;
   background: var(--bg-light);
   opacity: 0;

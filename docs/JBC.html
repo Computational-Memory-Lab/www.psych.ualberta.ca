@@ -16,6 +16,18 @@ Released   : 20100403
 <title>Computational Memory Lab</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<script>
+	(function() {
+		try {
+			var savedTheme = localStorage.getItem('theme');
+			var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (err) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		}
+	})();
+</script>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -43,7 +55,7 @@ Released   : 20100403
 <!-- end #header -->
 <!-- end #header-wrapper -->
 <div id="logo">
-  <img src="cml_logo.svg" alt="CML Logo" class="cml-logo">
+  <img src="images/cml_logo.svg" alt="CML Logo" class="cml-logo">
   <div class="logo-text-wrapper">
     <h1>Computational Memory Lab</h1>
     <p>Studying human memory through computation, behaviour, and brain imaging.</p>
@@ -59,7 +71,7 @@ Released   : 20100403
 				<h2 class="title"><a href="#"> Jeremy B. Caplan  </a></h2>
 				<div class="entry">
 					<p>Hello, my name is Jeremy Caplan and I'm the Principal Investigator here at the UofA Computational Memory Lab.<br><br>
-						<img src="JBC_2022_05_13.png" alt="group" style="width:250px;height:250px;"><br>
+						<img src="images/JBC_2022_05_13.png" alt="group" style="width:250px;height:250px;"><br>
 Psychology Department<br>
 Biological Sciences Building, P353
 University of Alberta<br>
@@ -136,17 +148,19 @@ T6G 2E9, Canada <br>
 </div>
 <script>
     const themeToggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
     const body = document.body;
 
     // Function to set the theme
     function setTheme(theme) {
+        root.dataset.theme = theme;
         body.dataset.theme = theme;
         localStorage.setItem('theme', theme);
     }
 
     // Toggle theme on button click
     themeToggle.addEventListener('click', () => {
-        const currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+        const currentTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
         setTheme(currentTheme);
     });
 

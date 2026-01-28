@@ -16,6 +16,18 @@ Released   : 20100403
 <title>Computational Memory Lab</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<script>
+	(function() {
+		try {
+			var savedTheme = localStorage.getItem('theme');
+			var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (err) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		}
+	})();
+</script>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -44,7 +56,7 @@ Released   : 20100403
 <!-- end #header -->
 <!-- end #header-wrapper -->
 <div id="logo">
-  <img src="cml_logo.svg" alt="CML Logo" class="cml-logo">
+  <img src="images/cml_logo.svg" alt="CML Logo" class="cml-logo">
   <div class="logo-text-wrapper">
     <h1>Computational Memory Lab</h1>
     <p>Studying human memory through computation, behaviour, and brain imaging.</p>
@@ -71,7 +83,7 @@ Released   : 20100403
 
 
 					<div class="team-member-grid" id="tamari-shalamberidze">
-						<img src="tamari.jpg" alt="tamari">
+						<img src="images/tamari.jpg" alt="tamari">
 						<div>
 							<h4>
 					        Tamari Shalamberidze, PhD student,
@@ -92,7 +104,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="amir-shafaghat">
-						<img src="amir.jpg" alt="amir">
+						<img src="images/amir.jpg" alt="amir">
 						<div>
 							<h4>
 							Amir Shafaghat, Volunteer Research Assistant,
@@ -112,7 +124,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="sergio-barra">
-						<img src="sergio.jpg" alt="sergio">
+						<img src="images/sergio.jpg" alt="sergio">
 						<div>
 							<h4>
 							Sergio Barra, Masters Student,
@@ -131,7 +143,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="ayaan-jutt">
-						<img src="ayaan.jpg" alt="ayaan">
+						<img src="images/ayaan.jpg" alt="ayaan">
 						<div>
 							<h4>
 							Ayaan Jutt, Computer Science Undergraduate,
@@ -146,7 +158,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="muhammad-khan">
-						<img src="muhammad.jpg" alt="Muhammad">
+						<img src="images/muhammad.jpg" alt="Muhammad">
 						<div>
 							<h4>
 							Muhammad Bilal Khan, Psychology Undergraduate,
@@ -163,7 +175,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="madhvi-sharma">
-						<img src="madhvi.jpg" alt="Madhvi">
+						<img src="images/madhvi.jpg" alt="Madhvi">
 						<div>
 							<h4>
 							Madhvi Sharma, Psychology Undergraduate,
@@ -181,7 +193,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="kieran-pawluk">
-						<img src="kieran.jpg" alt="Kieran">
+						<img src="images/kieran.jpg" alt="Kieran">
 						<div>
 							<h4>
 							Kieran Pawluk, Psychology Undergraduate,
@@ -196,7 +208,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="gaurav-bansal">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Gaurav Bansal, Psychology Undergraduate,
@@ -213,7 +225,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="aditi-roy">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/aditi_roy.jpg" alt="Aditi Roy">
 						<div>
 							<h4>
 							Aditi Roy, Psychology Undergraduate,
@@ -230,7 +242,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid" id="devon-yanitski">
-						<img src="devon_yanitski.jpg" alt="Devon Yanitski">
+						<img src="images/devon_yanitski.jpg" alt="Devon Yanitski">
 						<div>
 							<h4>
 							Devon Yanitski, Psychology Undergraduate,
@@ -256,7 +268,7 @@ Released   : 20100403
 				<h2 class="title"><a href="">Alumni</a></h2>
 
 					<div class="team-member-grid">
-						<img src="jeremyT.jpg" alt="jeremyT">
+						<img src="images/jeremyT.jpg" alt="jeremyT">
 						<div>
 							<h4>
 							Jeremy Thomas, Masters student,
@@ -268,7 +280,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="shikang.jpg" alt="shikang">
+						<img src="images/shikang.jpg" alt="shikang">
 						<div>
 							<h4>
 							Shikang Peng, Psychology Undergraduate, volunteer research assistant,
@@ -279,7 +291,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="naomi.jpg" alt="naomi">
+						<img src="images/naomi.jpg" alt="naomi">
 						<div>
 							<h4>
 							Naomi Robinson, Psychology Undergraduate,
@@ -290,7 +302,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="felicitas.jpg" alt="Felicitas">
+						<img src="images/felicitas.jpg" alt="Felicitas">
 						<div>
 							<h4>
 							Felicitas Kluger, PhD student,
@@ -301,7 +313,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="debby.jpg" alt="debby">
+						<img src="images/debby.jpg" alt="debby">
 						<div>
 							<h4>
 							Debby Olademeji, Neuroscience Undergraduate ,
@@ -312,7 +324,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="kezziah.jpg" alt="kezziah">
+						<img src="images/kezziah.jpg" alt="kezziah">
 						<div>
 							<h4>
 						    	Kezziah Ayuno, Psychology Undergraduate,
@@ -323,7 +335,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="sucheta.jpg" alt="Sucheta">
+						<img src="images/sucheta.jpg" alt="Sucheta">
 						<div>
 							<h4>
 							Sucheta Chakravarty, Doctoral candidate,
@@ -337,7 +349,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="yvonne.jpg" alt="Yvonne">
+						<img src="images/yvonne.jpg" alt="Yvonne">
 						<div>
 							<h4>
 							Yvonne Chen, Phd
@@ -352,7 +364,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="chris.jpg" alt="Chris">
+						<img src="images/chris.jpg" alt="Chris">
 						<div>
 							<h4> 
 							Christopher Madan, Psychology Phd
@@ -369,7 +381,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="leanna.jpg" alt="Leanna">
+						<img src="images/leanna.jpg" alt="Leanna">
 						<div>
 							<h4>
 							Leanna Cruikshank, Neuroscience PhD 
@@ -383,7 +395,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="yang.jpg" alt="Yang">
+						<img src="images/yang.jpg" alt="Yang">
 						<div>
 							<h4> 
 							Yang Liu, Psychology PhD
@@ -398,7 +410,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4> 
 							Ulises Rodriguez Dominguez, PhD student<br>
@@ -410,7 +422,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4> 
 							Kenichi Kato, Psychology M.Sc candidate
@@ -422,7 +434,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="simran.jpg" alt="Simran">
+						<img src="images/simran.jpg" alt="Simran">
 						<div>
 							<h4>
 							Simranjit Grewal, 1st year Science undergraduate,
@@ -434,7 +446,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Lin Wang, PhD,
@@ -445,7 +457,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Isaac Ward, undergraduate,
@@ -456,7 +468,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="courtney.jpg" alt="Courtney">
+						<img src="images/courtney.jpg" alt="Courtney">
 						<div>
 							<h4>
 							Courtney Stolz, 4th year Psychology & Biology undergraduate,
@@ -468,7 +480,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Preet Parmar, undergraduate,
@@ -479,7 +491,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="nicole.jpg" alt="nicole">
+						<img src="images/nicole.jpg" alt="nicole">
 						<div>
 						    <h4>
 							Nicole Dittmann, 3rd year Neuroscience undergraduate,
@@ -491,7 +503,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="Nitya.jpg" alt="Nitya">
+						<img src="images/Nitya.jpg" alt="Nitya">
 						<div>
 							<h4>
 							Nitya Khetarpal, 2nd year Neuroscience undergraduate,
@@ -502,7 +514,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Briana Kroeker, undergraduate,
@@ -513,7 +525,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Sophie Trageser, undergraduate,
@@ -524,7 +536,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="default.jpg" alt="Default Profile Photo">
+						<img src="images/default.jpg" alt="Default Profile Photo">
 						<div>
 							<h4>
 							Kaiyuan Xu, undergraduate,
@@ -535,7 +547,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="tomiann.jpg" alt="tomiann">
+						<img src="images/tomiann.jpg" alt="tomiann">
 						<div>
 							<h4> 
 							Tomi Ann Limcangco, Psychology undergraduate
@@ -548,7 +560,7 @@ Released   : 20100403
 					</div>
 
 					<div class="team-member-grid">
-						<img src="hanna.jpg" alt="Hanna">
+						<img src="images/hanna.jpg" alt="Hanna">
 						<div>
 							<h4> 
 							Hanna Warawa, undergraduate
@@ -648,17 +660,19 @@ Released   : 20100403
 <script src="scroll-offset.js"></script>
 <script>
     const themeToggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
     const body = document.body;
 
     // Function to set the theme
     function setTheme(theme) {
+        root.dataset.theme = theme;
         body.dataset.theme = theme;
         localStorage.setItem('theme', theme);
     }
 
     // Toggle theme on button click
     themeToggle.addEventListener('click', () => {
-        const currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+        const currentTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
         setTheme(currentTheme);
     });
 

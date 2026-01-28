@@ -5,6 +5,18 @@
 <title>Computational Memory Lab</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
+<script>
+	(function() {
+		try {
+			var savedTheme = localStorage.getItem('theme');
+			var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+			var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+			document.documentElement.setAttribute('data-theme', theme);
+		} catch (err) {
+			document.documentElement.setAttribute('data-theme', 'dark');
+		}
+	})();
+</script>
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
@@ -906,15 +918,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 	var themeToggle = document.getElementById('theme-toggle');
+	var root = document.documentElement;
 	var body = document.body;
 
 	function setTheme(theme) {
+		root.dataset.theme = theme;
 		body.dataset.theme = theme;
 		localStorage.setItem('theme', theme);
 	}
 
 	themeToggle.addEventListener('click', function() {
-		var currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+		var currentTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
 		setTheme(currentTheme);
 	});
 

@@ -6,6 +6,18 @@
   <title>Computational Memory Lab</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
+  <script>
+    (function() {
+      try {
+        var savedTheme = localStorage.getItem('theme');
+        var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        var theme = savedTheme || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (err) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
   <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style type="text/css">
@@ -86,6 +98,33 @@
     #recognition-phase p {
         margin-bottom: 0;
     }
+
+    /* Light theme overrides for game embed */
+    [data-theme="light"] .game-embed {
+        background: #f0f3f7;
+        border: 1px solid #e0e6ed;
+    }
+
+    [data-theme="light"] .game-embed button {
+        background-color: #4a90e2;
+        color: #ffffff;
+        border: 1px solid #e0e6ed;
+    }
+
+    [data-theme="light"] .game-embed button:hover {
+        background-color: #2a7de9;
+    }
+
+    [data-theme="light"] .game-embed input[type="text"] {
+        background-color: #ffffff;
+        color: #2c3e50;
+        border: 1px solid #e0e6ed;
+    }
+
+    [data-theme="light"] #word-display,
+    [data-theme="light"] #recognition-word {
+        color: #2c3e50;
+    }
   </style>
 </head>
 <body class="page-home">
@@ -110,7 +149,7 @@
   </div>
   <!-- end #header -->
   <div id="logo">
-  <img src="cml_logo.svg" alt="CML Logo" class="cml-logo">
+  <img src="images/cml_logo.svg" alt="CML Logo" class="cml-logo">
   <div class="logo-text-wrapper">
     <h1>Computational Memory Lab</h1>
     <p>Studying human memory through computation, behaviour, and brain imaging.</p>
@@ -196,7 +235,6 @@
           <h2 class="title"><a href="#">Lorem ipsum sed aliquam</a></h2>-->
           <div class="entry">
             <p>The lab is part of the <a href="https://www.ualberta.ca/~acn/">Alberta Cognitive Neuroscience Group</a> and the <a href="https://uofa.ualberta.ca/neuroscience-and-mental-health-institute">Neuroscience and Mental Health Institute</a>.</p>
-
             <p>Our EEG equipment is funded by the Canada Foundation for Innovation (CFI) and the Natural Sciences and Engineering Research Council of Canada (NSERC). We also receive operating funding from NSERC.</p>
           </div>
         </div>
@@ -255,17 +293,19 @@
   <script src="attention_tuner/script.js"></script>
   <script>
     const themeToggle = document.getElementById('theme-toggle');
+    const root = document.documentElement;
     const body = document.body;
 
     // Function to set the theme
     function setTheme(theme) {
+        root.dataset.theme = theme;
         body.dataset.theme = theme;
         localStorage.setItem('theme', theme);
     }
 
     // Toggle theme on button click
     themeToggle.addEventListener('click', () => {
-        const currentTheme = body.dataset.theme === 'dark' ? 'light' : 'dark';
+        const currentTheme = root.dataset.theme === 'dark' ? 'light' : 'dark';
         setTheme(currentTheme);
     });
 

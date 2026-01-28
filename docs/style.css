@@ -718,6 +718,7 @@ p[style*="color:red"] {
   body {
     font-size: 18px;
     line-height: 1.7;
+    overflow-x: hidden;
   }
 
   #header {
@@ -801,6 +802,14 @@ p[style*="color:red"] {
     flex-direction: column;
     gap: 16px;
     text-align: center;
+    overflow: hidden;
+  }
+
+  #logo::before {
+    width: 90vw;
+    height: 90vw;
+    max-width: 360px;
+    max-height: 360px;
   }
 
   .logo-text-wrapper {
@@ -822,13 +831,14 @@ p[style*="color:red"] {
   }
 
   #page {
-    margin: 0 12px 32px;
-    border-radius: 28px;
+    margin: 0 0 24px;
+    border-radius: 0;
+    width: 100%;
   }
   
   #page-bgtop {
     padding: 26px 18px 30px;
-    border-radius: 28px;
+    border-radius: 0;
     gap: 32px;
   }
   
@@ -884,8 +894,8 @@ p[style*="color:red"] {
   }
 
   #footer {
-    border-bottom-left-radius: 28px;
-    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
 
   button,
